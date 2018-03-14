@@ -2,7 +2,7 @@ package ex.aaronfae.ch1.javaconfig;
 
 public class UserFunctionService {
 
-    private FunctionService functionService;
+    final private FunctionService functionService;
 
     public UserFunctionService(FunctionService functionService) {
         this.functionService = functionService;
