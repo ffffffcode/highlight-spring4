@@ -6,8 +6,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserFunctionService {
 
+    final private FunctionService functionService;
+
     @Autowired
-    private FunctionService functionService;
+    public UserFunctionService(FunctionService functionService) {
+        this.functionService = functionService;
+    }
 
     public String sayHello(String word) {
         return functionService.sayHello(word);
